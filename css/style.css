@@ -1,0 +1,466 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
+
+:root {
+  --orange: #ffa600fa;
+}
+
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+ 
+
+
+html {
+  font-size: 70%;
+  overflow-x: hidden;
+  scroll-padding-top: 6em;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 3rem 10%;
+}
+
+.title {
+  text-align: center;
+  padding: 2.5rem 0;
+}
+
+.title span {
+  font-size: 3.5rem;
+
+  /* background: rgba(255, 165, 0, 0.2);
+  color: var(--orange); */
+
+  background: rgba(0, 217, 255, 0.2);
+  color: #47a8f3;
+
+  border-radius: 0.5rem;
+  padding: 0.2rem 1rem;
+}
+
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #47a8f3;
+  color: white;
+  padding: 1rem 2rem;
+  border: 0.2rem solid #47a8f3;
+  font-size: 2rem;
+}
+
+.btn:hover {
+  color:var(--orange);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  /* background: #333; */
+  background: #2499f1;
+
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 9%;
+}
+
+header .logo {
+  font-size: 3rem;
+  font-weight: bolder;
+  color: white;
+  text-transform: uppercase;
+}
+
+header .logo span {
+  color: orange;
+}
+
+header .navbar a {
+  color: white;
+  font-size: 2.5rem;
+  padding: 1rem; 
+}
+
+header .navbar a:hover {
+  color: var(--orange);
+}
+
+/* for the menu tab bar */
+#menu-bar {
+  color: white;
+  border: 0.1rem double white;
+  border-radius: 1rem;
+  font-size: 3rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  display: none;
+}
+
+/* Test */
+
+/* --------------------------end test----------------- */
+
+
+
+/* css for Home Page */
+.home {
+  
+  display: flex;
+  flex-flow: column;
+  /* space between header */
+  padding-top: 100px;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.home .row {
+  display: flex;
+  /* make flex items wrap if necessary (case: IphoneX)*/
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.home .row .image {
+    
+  flex: 1 1 30rem;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.home .row .image img {
+  width: 100%;
+}
+
+
+.home .content{
+    text-align: center;
+}
+
+.home .content h3{
+  color: black;  
+  font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 10rem;
+    
+}
+
+.home .content p{
+    font-size: 2.5rem;
+    color: grey;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+/* End css for home page -------------------------------------------------------------- */
+
+/* css for booking page start */
+
+
+.booking {
+  /* space between header */
+  padding-top: 100px;
+}
+
+.booking span.space {
+  background: none;
+}
+
+.booking .row {
+  display: flex;
+  /* make flex items wrap if necessary (case: IphoneX)*/
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.booking .row .image {
+  flex: 1 1 30rem;
+}
+
+.booking .row .image img {
+  width: 100%;
+}
+
+.booking .row form {
+  flex: 30%;
+  padding: 1.5rem;
+
+  /* add the shadow for the form */
+  box-shadow: 0 2rem 1.5rem rgba(1, 1, 1, 0.2);
+
+}
+
+
+.booking .row form .inputBox input {
+  width: 100%;
+  padding: 1rem;
+  border: 0.2rem double rgba(1, 1, 1, 0.2);
+  /* all of the placeholder is lowercase */
+  text-transform: none;
+}
+
+.booking .row form .inputBox h3 {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+
+}
+
+/* booking page end ---------------------------------------------------------------------------------------------------  */
+
+
+/* css for place page start */
+.place {
+  padding-top: 100px;
+}
+
+.place .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.place .box-container .box {
+  flex: 40rem;
+
+  border-radius: 5px;
+
+
+  box-shadow: 0 2rem 1.5rem rgba(1, 1, 1, 0.2);
+}
+
+.place .box-container .box img {
+  height: 25rem;
+  width: 100%;
+
+}
+
+.place .box-container .box .content {
+  padding: 2rem;
+}
+
+.place .box-container .box .content h3 {
+  font-size: 3rem;
+
+  color: black;
+}
+
+.place .box-container .box .content h3 i {
+  color: #ffa500;
+}
+
+.place .box-container .box .content p {
+  font-size: 2rem;
+  color: rgb(92, 91, 91);
+  font-weight: bold;
+
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* will repair to the weather of this country */
+.place .box-container .box .content .stars i {
+  font-size: 1.5rem;
+
+  color: #ffa500;
+}
+
+/* the original price for tour */
+.place .box-container .box .content .price {
+  font-size: 1.9rem;
+
+  font-weight: bold;
+
+  color:black;
+
+  padding-top: 1rem;
+}
+
+/* the  promotion price for tour*/
+
+.place .box-container .box .content .price span {
+  color: #666;
+  font-size: 1.9rem;
+  text-decoration: line-through;
+}
+
+
+/* css for place page end ------------------------------------------------------------------------------------------- */
+
+/* css for tour page */
+.tour {
+  padding-top: 100px;
+}
+
+.tour .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.tour .box-container .box {
+  /* flex: 1 1 30rem; */
+  flex: 40rem;
+
+  /* border-radius: 0.5rem; */
+  border-radius: 5px;
+
+  /* overflow: hidden; */
+
+  /* box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1); */
+  box-shadow: 0 2rem 1.5rem rgba(1, 1, 1, 0.2);
+}
+
+.tour .box-container .box img {
+  height: 25rem;
+  width: 100%;
+
+  /* object-fit: cover; */
+}
+
+.tour .box-container .box .content {
+  padding: 2rem;
+}
+
+.tour .box-container .box .content h2 {
+  /* font-size: 2rem; */
+  font-size: 3rem;
+
+  /* color: #333; */
+  color: black;
+}
+
+.tour .box-container .box .content h3 {
+  /* font-size: 2rem; */
+  font-size: 2rem;
+  padding-top: 1rem;
+
+  /* color: #333; */
+  color: black;
+}
+
+.tour .box-container .box .content h2 i {
+  /* color: var(--orange); */
+  color: #ffa500;
+}
+
+.tour .box-container .box .content p {
+  font-size: 2rem;
+
+  /* padding: 1rem 0; */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* will repair to the weather of this country */
+.tour .box-container .box .content .stars i {
+  font-size: 1.5rem;
+
+  /* color: var(--orange); */
+  color: #ffa500;
+}
+
+/* the original price for tour */
+.tour .box-container .box .content .price {
+  /* font-size: 2rem; */
+  font-size: 1.9rem;
+
+  font-weight: bold;
+
+  /* color: #333; */
+  color:black;
+
+  padding-top: 1rem;
+}
+
+/* the  promotion price for tour*/
+
+.tour .box-container .box .content .price span {
+  color: #666;
+  font-size: 1.9rem;
+  text-decoration: line-through;
+}
+
+
+
+/* css for tour page end ------------------------------------------------------------------------------------------- */
+
+
+
+
+
+/* Responsive for website */
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 991px) {
+  header {
+    padding: 1.5rem;
+  }
+
+  section {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-bar {
+    display: initial;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: #47a8f3;
+    padding: 1rem 2rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  header .navbar a {
+    display: block;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    background: #47a8f3;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .heading span {
+    font-size: 2.5rem;
+  }
+
+}
