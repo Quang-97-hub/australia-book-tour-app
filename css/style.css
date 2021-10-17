@@ -464,3 +464,104 @@ header .navbar a:hover {
   }
 
 }
+
+/* css for feedback page */
+.feedback{
+    /* space between header */
+    padding-top: 100px;
+}
+
+/* .feedback .container {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0px 0px 20px #00000010;
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.feedback .form-group {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.feedback .form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 5px;
+  font-size: 18px;
+  border: 1px solid rgba(128, 128, 128, 0.199);
+  margin-top: 5px;
+} */
+
+
+.feedback form {
+  flex: 30%;
+  padding: 1.5rem;
+
+  /* add the shadow for the form */
+  box-shadow: 0 2rem 1.5rem rgba(1, 1, 1, 0.2);
+
+}
+.feedback form .inputBox h3 {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+
+}
+
+.feedback form .inputBox input {
+  width: 100%;
+  padding: 1rem;
+  border: 0.2rem double rgba(1, 1, 1, 0.2);
+  /* all of the placeholder is lowercase */
+  text-transform: none;
+}
+
+.feedback form .inputBox textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 0.2rem double rgba(1, 1, 1, 0.2);
+  /* all of the placeholder is lowercase */
+  text-transform: none;
+}
+
+.feedback form .inputBox label {
+  font-size: 2rem;
+  padding-bottom: 10rem;
+  padding-top: 10rem;
+  font-weight: bold;
+}
+
+.feedback .container #status{
+  display: block;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 8px;
+  font-size: 2rem;
+  font-style:normal;
+  font-weight:400;
+  /* the box will display in 3 second */
+  animation: status 5s ease forwards; 
+}
+/* make the user notification disappearance in 3 second */
+@keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
