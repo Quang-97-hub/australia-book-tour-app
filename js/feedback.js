@@ -1,27 +1,55 @@
-var form = document.getElementById("my-form");
+window.addEventListener("DOMContentLoaded", function () {
+  // get the form elements defined in your form HTML above
 
-    
-    async function handleSubmit(event) {
-      event.preventDefault(); // prevent link to the form page (Form spree.com)
-      var status = document.getElementById("status");
-      var data = new FormData(event.target);
-      fetch(event.target.action, {
-        method: form.method,
-        body: data,
-        headers: {
-            'Accept': 'application/json'
-        }
-      }).then(response => {
-        form.reset(); // reset the form
-        status.style.display = "display"; // display the message
-        status.style.color = "#4F8A10";
-        status.style.background= "#DFF2BF";
-        status.innerHTML = "Submit successfully ! Thank you."; // this message will be display if the user submitting successfully.
-      }).catch(error => {
-        status.style.display = "display"; // display the message.
-        status.style.color = "#D8000C"; 
-        status.style.background= "#FFD2D2";
-        status.innerHTML = "Oops! There was a problem submitting your form" // this message will be shown if error in submit the form.
+  var form = document.getElementById("my-form");
+
+
+  // Success and Error functions for after the form is submitted
+
+  function success() {
+    form.reset(); // reset the form
+
+  // the alert box message to let the user know they has submit successfully
+      swal({
+        title: "Submit successfully ! Thank you.",
+        text: "Your feeback has been sent to support team",
+        icon: "success",
       });
+  }
+
+  function error() {
+    // the alert box message to let the user know they has submit with some error
+    swal({
+        title: "Oops! There were a problem!",
+        text: "Please filled the form and submit again",
+        icon: "error",
+      });
+  }
+
+  // handle the form submission event
+  form.addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var data = new FormData(form);
+    ajax(form.method, form.action, data, success, error);
+  });
+});
+
+
+// helper function for sending an AJAX request
+function ajax(method, url, data, success, error) {
+  var xhr = new XMLHttpRequest();
+  xhr.open(method, url);
+  xhr.setRequestHeader("Accept", "application/json");
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState !== XMLHttpRequest.DONE) return;
+    if (xhr.status === 200) {
+      success(xhr.response, xhr.responseType);
+    } else {
+      error(xhr.status, xhr.response, xhr.responseType);
     }
-    form.addEventListener("submit", handleSubmit)
+  };
+  xhr.send(data);
+}
+
+
+
