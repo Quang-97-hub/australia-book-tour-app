@@ -536,32 +536,3 @@ header .navbar a:hover {
   font-weight: bold;
 }
 
-.feedback .container #status{
-  display: block;
-  width: 80%;
-  max-width: 400px;
-  text-align: center;
-  padding: 10px;
-  margin: 0 auto;
-  border-radius: 8px;
-  font-size: 2rem;
-  font-style:normal;
-  font-weight:400;
-  /* the box will display in 3 second */
-  animation: status 5s ease forwards; 
-}
-/* make the user notification disappearance in 3 second */
-@keyframes status {
-  0% {
-    opacity: 1;
-    pointer-events: all;
-  }
-  90% {
-    opacity: 1;
-    pointer-events: all;
-  }
-  100% {
-    opacity: 0;
-    pointer-events: none;
-  }
-}
