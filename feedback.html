@@ -66,26 +66,35 @@
     <div class="container">
         <form action="https://formspree.io/f/mdoyvaka" method="POST" id="my-form">
 
+            <!-- First Name -->
             <div class="inputBox">
                 <h3>First Name</h3>
                 <input type="text" id="firstName" name="firstName" placeholder="First Name"  required="required">
             </div> 
+            <!-- Last Name -->
             <div class="inputBox">
                 <h3>Last Name</h3>
                 <input type="text" id="lastName" name="lastName" placeholder="Last Name"  required="required">
             </div> 
+
+            <!-- Email -->
             <div class="inputBox">
                 <h3>Email</h3>
                 <input type="email" id="email" name="email"  placeholder="Email"  required="required">
             </div> 
+            <!-- What tour they book -->
             <div class="inputBox">
                 <h3>What tour you want to book ?</h3>
                 <input type="text" id="touName"  name="tourName" placeholder="Tour Name"  required="required">
             </div>
+
+            
+            <!-- User leave feedback about the tour -->
           <div class="inputBox">
-            <label for="feedback">Feedback</label>
-            <textarea name="feedback" id="feedback" cols="30" rows="10"></textarea>
+            <label for="comment">Feedback</label>
+            <textarea id="comment" name="comment" rows="4" cols="20" placeholder="Write some the comment ...."> </textarea>
           </div>
+
     
           <button class= "btn" type="submit">Submit</button>
         </form>

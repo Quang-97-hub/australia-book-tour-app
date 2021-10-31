@@ -30,7 +30,15 @@ window.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function (ev) {
     ev.preventDefault();
     var data = new FormData(form);
-    ajax(form.method, form.action, data, success, error);
+    var comment = document.getElementById("comment").value;
+    // for check uer input the comment box or not.
+    if(comment == 0){
+      error()
+    }
+    // will submit the form to Formspree
+    else{
+      ajax(form.method, form.action, data, success, error); 
+    }
   });
 });
 
