@@ -13,6 +13,9 @@
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- cdn for sweet alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </head>
 <body>
     
@@ -66,24 +69,64 @@
             <img src="images/onboarding_image.jpg" alt="">
         </div>
 
-        <form action="">
+        <form id= "book_form" action="confirm.html">
+            <!-- Frist name -->
+            <div class="inputBox">
+                <h3>First Name</h3>
+                <input type="text" id="firstName" name="firstName" placeholder="frist name">
+                <span class="errMessage" id ="errFirstName"></span>
+            </div>
+
+            <!-- Last name -->
+            <div class="inputBox">
+                <h3>Last Name</h3>
+                <input type="text" id="lastName" name="lastName" placeholder="last name">
+                <span class="errMessage" id ="errLastName"></span>
+            </div>
+
+            <div class="inputBox">
+                <h3>Email</h3>
+                <input type="text" name="email"  placeholder="@gmail.com" id="email" >
+                <span class="errMessage" id ="errGmail"></span>
+            </div>
+
+            <!-- Tour name -->
+            <!-- <div class="inputBox">
+                <h3>What tour you want to book ?</h3>
+                <input type="text" id="tourName" placeholder="tour name">
+                <span class="errMessage" id ="errTourName"></span>
+            </div> -->
+
             <div class="inputBox">
                 <h3>What tour you want to book ?</h3>
-                <input type="text" placeholder="place name">
+                <!-- <label for="tourName"></label> -->
+                <!-- <input type="text" id="tourName" placeholder="tour name"> -->
+                <select  name="tourName" id="tourName" required="required">
+                    <option value="">Select the tour</option>
+                    <option value= "Litchfield National Park And Jumping Crocodile Cruise"> Litchfield National Park And Jumping Crocodile Cruise</option>
+                    <option value= "Sunset Hour Cruise From Darwin With Dinner And Sparkling Wine">Sunset Hour Cruise From Darwin With Dinner And Sparkling Wine</option>
+                    <option value= "Top End Safari Camp Day Tour">Top End Safari Camp Day Tour</option>
+                    <option value= "Katherine Day Tour From Darwin Including Katherine Gorge Cruise">Katherine Day Tour From Darwin Including Katherine Gorge Cruise</option>
+                </select>
+                <span class="errMessage" id ="errTourName"></span>
             </div>
+
+
+            <!-- How many person -->
             <div class="inputBox">
                 <h3>How many person</h3>
-                <input type="number" placeholder="number of guests">
+                <input type="number" id="numberOfGuest" name="numberOfGuest" placeholder="number of guests">
+                <span class="errMessage" id ="errGuest"></span>
             </div>
+
+            <!--  What date-->
             <div class="inputBox">
                 <h3>Arrivals Date</h3>
-                <input type="date">
+                <input type="date" name="date" id= "date" required="required">
+                <span class="errMessage" id ="errArrivalDate"></span> 
             </div>
-            <div class="inputBox">
-                <h3>Leaving Date</h3>
-                <input type="date">
-            </div>
-            <input type="submit" class="btn" value="book now">
+ 
+            <button type="button" class="btn" id="btnBook">Book Now</button>
         </form>
 
     </div>
@@ -95,4 +138,7 @@
 
 <!-- custom js file link  -->
 <script src="js/script.js"></script>
+<script src="js/validation.js"></script>
+<script src="js/book.js"></script>
+
 </body>
