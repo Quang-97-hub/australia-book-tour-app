@@ -186,7 +186,7 @@ header .navbar a:hover {
 }
 
 .booking .row {
-  display: flex;
+/*   display: flex; */
   /* make flex items wrap if necessary (case: IphoneX)*/
   gap:1.5rem;
   flex-wrap: wrap;
