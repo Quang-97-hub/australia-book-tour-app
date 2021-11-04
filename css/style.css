@@ -188,6 +188,7 @@ header .navbar a:hover {
 .booking .row {
   display: flex;
   /* make flex items wrap if necessary (case: IphoneX)*/
+  gap:1.5rem;
   flex-wrap: wrap;
   align-items: center;
 }
@@ -217,6 +218,14 @@ header .navbar a:hover {
   /* all of the placeholder is lowercase */
   text-transform: none;
 }
+/* for select the tour */
+.booking .row form select{
+  width: 100%;
+  padding: 1rem;
+  border: 0.2rem double rgba(1, 1, 1, 0.2);
+  /* all of the placeholder is lowercase */
+  text-transform: none;
+}
 
 .booking .row form .inputBox h3 {
   font-size: 2rem;
@@ -225,6 +234,25 @@ header .navbar a:hover {
 
 }
 
+/* <span> errMessage */
+.booking .row form .inputBox .errMessage {
+  color: red;
+  margin-left: 2px;
+  font-size: 1.5rem;
+  padding-top: 1rem;
+  display: block;
+  text-transform: none;
+}
+
+/* <span> confirm-infor */
+.booking .row form .inputBox .confirm-infor {
+  color: black;
+  margin-left: 2px;
+  font-size: 1.5rem;
+  display: block;
+  text-transform: none;
+  border: 0.2rem double rgba(10, 180, 19, 0.541);
+}
 /* booking page end ---------------------------------------------------------------------------------------------------  */
 
 
